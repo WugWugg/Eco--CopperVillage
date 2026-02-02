@@ -1,0 +1,49 @@
+{
+  "version": [
+    1,
+    0
+  ],
+  "type": "Eco.Gameplay.Settlements.Settlement",
+  "name": "Copper Village",
+  "reference": false,
+  "description": null,
+  "properties": {
+    "Leader": {
+      "type": "Eco.Gameplay.Civics.Titles.ElectedTitle",
+      "name": "Copper Village Secretary-General",
+      "reference": true
+    },
+    "ImmigrationPolicy": {
+      "type": "Eco.Gameplay.Civics.Immigration.ImmigrationPolicy",
+      "name": "Copper Village Immigration Policy",
+      "reference": true
+    },
+    "ElectionProcess": {
+      "type": "Eco.Gameplay.Civics.ElectionProcess",
+      "name": "Copper Village Election Process",
+      "reference": true
+    },
+    "Constitution": {
+      "type": "Eco.Gameplay.Civics.Constitution",
+      "name": "Copper Village Constitution",
+      "reference": true
+    },
+    "CitizenDemographic": {
+      "type": "Eco.Gameplay.Civics.Demographics.Demographic",
+      "name": "Citizens of Copper Village",
+      "reference": true
+    },
+    "TreasuryBankAccount": {
+      "type": "Eco.Gameplay.Economy.TreasuryBankAccount",
+      "name": "Copper Village Treasury",
+      "reference": true
+    },
+    "DefaultCurrency": {
+      "type": "Eco.Gameplay.Economy.Currency",
+      "name": "Coins",
+      "reference": true
+    },
+    "AdvertisementToNewPeopleEnteringWorld": "Welcome!",
+    "LastAnnexedTime": 0.0
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "version": [
+    1,
+    0
+  ],
+  "type": "Eco.Gameplay.Civics.Constitution",
+  "name": "Copper Village Constitution",
+  "reference": false,
+  "description": null,
+  "properties": {
+    "Articles": [
+      {
+        "type": "Eco.Gameplay.Civics.CivicArticle",
+        "name": "Copper Village Constitution - All Other Privileges",
+        "reference": false,
+        "description": null,
+        "properties": {
+          "AppliesTo": {
+            "type": "Eco.Gameplay.Civics.Constitutional.CivicConditionAllOtherCivicAbilities",
+            "reference": false,
+            "properties": {}
+          },
+          "Proposers": {
+            "type": "GamePickerList",
+            "mustDeriveType": {
+              "type": "Type",
+              "value": "Eco.Gameplay.Aliases.IAlias"
+            },
+            "requiredTag": null,
+            "internalDescription": "<link=\"view:5039:137626\"><icon name=\"Demographic\" type=\"\"><style=\"Government\">Citizens of Copper Village</style></icon></link>",
+            "entries": [
+              {
+                "type": "Eco.Gameplay.Civics.Demographics.Demographic",
+                "name": "Citizens of Copper Village",
+                "reference": true
+              }
+            ]
+          },
+          "Executors": {
+            "type": "GamePickerList",
+            "mustDeriveType": {
+              "type": "Type",
+              "value": "Eco.Gameplay.Aliases.IAlias"
+            },
+            "requiredTag": null,
+            "internalDescription": "<link=\"view:5039:1773\"><icon name=\"Demographic\" type=\"\"><style=\"Government\">Admins</style></icon></link>",
+            "entries": [
+              {
+                "type": "Eco.Gameplay.Civics.Demographics.Demographic",
+                "name": "Admins",
+                "reference": true
+              }
+            ]
+          },
+          "ElectionProcess": {
+            "type": "Eco.Gameplay.Civics.ElectionProcess",
+            "name": "Copper Village Election Process",
+            "reference": true
+          },
+          "Priority": 0.0,
+          "State": "Active"
+        }
+      }
+    ],
+    "State": "Active"
+  }
+}

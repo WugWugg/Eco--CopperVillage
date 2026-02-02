@@ -1,0 +1,120 @@
+{
+  "version": [
+    1,
+    0
+  ],
+  "type": "Eco.Gameplay.Civics.Laws.Law",
+  "name": "Property Abandonment Law",
+  "reference": false,
+  "description": "After a citizen is inactive for 5 days, they will be considered abandoned and their property rights revoked. ",
+  "properties": {
+    "Sections": [
+      {
+        "type": "Eco.Gameplay.Civics.Laws.LawSection",
+        "reference": false,
+        "properties": {
+          "Title": "Abandoned",
+          "UserDescription": "",
+          "Triggers": [
+            {
+              "type": "Eco.Gameplay.Civics.Laws.TriggerSettings",
+              "reference": false,
+              "properties": {
+                "Trigger": {
+                  "type": "Type",
+                  "value": "Eco.Gameplay.GameActions.DemographicChange"
+                },
+                "Configs": [
+                  {
+                    "type": "Eco.Gameplay.GameActions.SelectTriggerConfig",
+                    "typeToConfig": "Eco.Gameplay.GameActions.DemographicChange",
+                    "propNameBacker": "Demographic",
+                    "propDisplayName": "Demographic",
+                    "properties": {
+                      "List": {
+                        "type": "GamePickerList",
+                        "mustDeriveType": {
+                          "type": "Type",
+                          "value": "Eco.Gameplay.Civics.Demographics.Demographic"
+                        },
+                        "requiredTag": null,
+                        "internalDescription": "<link=\"view:5039:1782\"><icon name=\"Demographic\" type=\"\"><style=\"Government\">Abandoned</style></icon></link>",
+                        "entries": [
+                          {
+                            "type": "Eco.Gameplay.Civics.Demographics.Demographic",
+                            "name": "Abandoned",
+                            "reference": true
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "IfThenBlocks": [
+            {
+              "type": "Eco.Gameplay.Civics.IfThenBlock",
+              "reference": false,
+              "properties": {
+                "If": {
+                  "type": "Eco.Gameplay.Civics.GameValues.SetOfConditions",
+                  "properties": {
+                    "List": [
+                      {
+                        "type": "GameValueContext",
+                        "_name": "EnteringDemographic",
+                        "markedUpName": "<icon name=\"DemographicChange\" type=\"\">Entering Demographic</icon>",
+                        "contextDescription": "<i>Did The citizen become part of the demographic, or stop being part?</i>"
+                      },
+                      {
+                        "type": "Eco.Gameplay.Civics.GameValues.Values.IsNotAdmin",
+                        "properties": {
+                          "Citizen": {
+                            "type": "GameValueContext",
+                            "_name": "Citizen",
+                            "markedUpName": "<icon name=\"User\" type=\"\">Citizen</icon>",
+                            "contextDescription": "<i>The citizen who changed demographics.</i>"
+                          }
+                        }
+                      }
+                    ],
+                    "Comparison": "All"
+                  }
+                },
+                "Then": [
+                  {
+                    "type": "Eco.Gameplay.Civics.LegalActions.ChangePropertyOwner_LegalAction",
+                    "reference": false,
+                    "properties": {
+                      "Property": {
+                        "type": "Eco.Gameplay.Civics.GameValues.PropertyValues.AllProperty",
+                        "reference": false,
+                        "properties": {
+                          "CurrentlyOwnedByCitizen": {
+                            "type": "GameValueContext",
+                            "_name": "Citizen",
+                            "markedUpName": "<icon name=\"User\" type=\"\">Citizen</icon>",
+                            "contextDescription": "<i>The citizen who changed demographics.</i>"
+                          },
+                          "IgnorePropertyWithMulitpleOwners": true
+                        }
+                      },
+                      "NewOwner": null,
+                      "InfoboxOnSuccess": {
+                        "type": "Eco.Gameplay.Civics.GameValues.Yes",
+                        "properties": {}
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "State": "Active"
+  }
+}

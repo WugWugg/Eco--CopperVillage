@@ -1,0 +1,39 @@
+{
+  "version": [
+    1,
+    0
+  ],
+  "type": "Eco.Gameplay.Civics.ElectionProcess",
+  "name": "Copper Village Election Process",
+  "reference": false,
+  "description": null,
+  "properties": {
+    "Voters": {
+      "type": "Eco.Gameplay.Civics.Demographics.Demographic",
+      "name": "Everyone",
+      "reference": true
+    },
+    "Vetoers": {
+      "type": "Eco.Gameplay.Civics.Demographics.Demographic",
+      "name": "Admins",
+      "reference": true
+    },
+    "WhoCanStartElections": {
+      "type": "Eco.Gameplay.Civics.Demographics.Demographic",
+      "name": "Admins",
+      "reference": true
+    },
+    "HowToProceedIfElectionsEndInATie": "RandomCandidate",
+    "MaximumElectionHours": 24.0,
+    "MinimumPercentOfEligibleVotersRequired": 10.0,
+    "PercentOfAllVotersToInstantWin": 51.0,
+    "PercentOfAllVotersToInstantLose": 51.0,
+    "EndElectionEarlyWhenThisPercentHaveVoted": 95.0,
+    "MinimumDaysBetweenElectionsOfThisType": 0.0,
+    "AnonymousVoting": true,
+    "TwitchSubscriberVoteWeight": 0.2,
+    "TwitchNonSubscriberVoteWeight": 0.1,
+    "MaxPercentTwitchVotes": 50.0,
+    "State": "Active"
+  }
+}

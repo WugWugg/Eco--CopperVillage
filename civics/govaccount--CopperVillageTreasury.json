@@ -1,0 +1,29 @@
+{
+  "version": [
+    1,
+    0
+  ],
+  "type": "Eco.Gameplay.Economy.TreasuryBankAccount",
+  "name": "Copper Village Treasury",
+  "reference": false,
+  "description": null,
+  "managers": [
+    {
+      "type": "Eco.Gameplay.Civics.Demographics.Demographic",
+      "name": "Admins",
+      "reference": true
+    }
+  ],
+  "users": [],
+  "properties": {},
+  "holdings": [
+    {
+      "currency": {
+        "type": "Eco.Gameplay.Economy.Currency",
+        "name": "Coins",
+        "reference": true
+      },
+      "amount": 774914.2
+    }
+  ]
+}

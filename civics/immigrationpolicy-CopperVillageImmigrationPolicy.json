@@ -1,0 +1,30 @@
+{
+  "version": [
+    1,
+    0
+  ],
+  "type": "Eco.Gameplay.Civics.Immigration.ImmigrationPolicy",
+  "name": "Copper Village Immigration Policy",
+  "reference": false,
+  "description": null,
+  "properties": {
+    "AllowApplicants": true,
+    "RequirementsForNewCitizens": null,
+    "Approver": null,
+    "HoursFailingRequirementsBeforeRemovedAsCitizen": 24.0,
+    "AllowBrandNewPeopleToInstantlyJoin": true,
+    "RequirementsForNewChildSettlement": null,
+    "AllowForeignPropertyOwnership": true,
+    "PropertyHeirWhenCitizensLeave": {
+      "type": "Eco.Gameplay.Civics.Titles.ElectedTitle",
+      "name": "Copper Village Secretary-General",
+      "reference": true
+    },
+    "AllowChildSettlementsToSecede": true,
+    "ChildrenSettlementsMayAnnexEachOther": false,
+    "CanHaveDirectCitizens": true,
+    "AllowBecomeCitizenUponHomesteadPlacement": true,
+    "UseFoundationAsSpawn": false,
+    "State": "Active"
+  }
+}
